@@ -1,3 +1,3 @@
-curl https://www.boursorama.com/bourse/indices/cours/1rPCAC/ | grep -oP "(?<=data-ist-last>)[0-9]\s.\w+.\w+" >> valuedate.csv | date >> valuedate.csv 
+curl https://www.boursorama.com/bourse/indices/cours/1rPCAC/ | grep -oP "(?<=data-ist-last>)[0-9]\s.\w+.\w+" >> values.csv | date >> dates.csv 
 sed -i '$d' valuedate.csv | sed -i '$d' valuedate.csv 
 cat valuedate.csv
